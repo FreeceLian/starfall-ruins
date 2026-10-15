@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="112" viewBox="0 0 96 112">
+<defs><linearGradient id="armor" x2=".8" y2="1"><stop stop-color="#e1eeee"/><stop offset=".4" stop-color="#607e96"/><stop offset="1" stop-color="#1b2947"/></linearGradient><linearGradient id="cloak" x2="1" y2="1"><stop stop-color="#426d95"/><stop offset="1" stop-color="#121831"/></linearGradient><linearGradient id="blade"><stop stop-color="#5ccfe8" stop-opacity="0"/><stop offset=".55" stop-color="#78eeef"/><stop offset="1" stop-color="#f1fff6"/></linearGradient></defs>
+<ellipse cx="46" cy="101" rx="27" ry="7" fill="#030813" opacity=".5"/>
+<path d="M30 34Q15 56 15 89L28 83 34 100 47 86 65 96 72 84Q68 53 61 37Z" fill="url(#cloak)" stroke="#5e8aa8" stroke-width="1.5"/>
+<path d="M28 45L24 79 35 69M59 45L65 79 53 75" stroke="#71bdc8" fill="none" opacity=".45"/>
+<path d="M32 71L30 93 26 99 39 99 44 72M48 71L51 95 49 100 64 100 60 91 58 69" fill="#172b43" stroke="#8da2b3" stroke-width="2"/>
+<path d="M31 38L25 50 31 70 44 80 59 69 65 47 57 35Z" fill="url(#armor)" stroke="#15253b" stroke-width="2"/>
+<path d="M28 48L44 56 62 46M44 57L44 73M32 64L43 68 57 62" fill="none" stroke="#c1d6d7" stroke-width="2"/>
+<path d="M44 43L50 50 44 58 38 50Z" fill="#adffed" stroke="#51bddd" stroke-width="2"/>
+<path d="M29 33L16 43 18 55 30 53 37 42M57 34L71 42 71 54 59 51 51 41" fill="url(#armor)" stroke="#9ab7ca" stroke-width="2"/>
+<path d="M20 52L17 70 24 73 30 55M66 51L68 68 75 68 75 51" fill="#324c65" stroke="#b6ccd2" stroke-width="2"/>
+<path d="M30 18L36 9 51 7 61 19 59 36 47 43 33 34Z" fill="url(#armor)" stroke="#adc8d4" stroke-width="2"/>
+<path d="M31 22L46 27 59 20 54 35 46 40 38 34Z" fill="#111d32"/>
+<path d="M34 25L43 28M49 27L56 24" stroke="#8fffe9" stroke-width="3"/>
+<path d="M43 10L46 25 50 9M45 29L46 39" stroke="#d2e6e1" stroke-width="2"/>
+<path d="M47 8Q50-1 63 1L58 7 66 10 53 14" fill="#68d7db"/>
+<path d="M73 71L78 22 84 13 87 25 79 72Z" fill="url(#blade)" stroke="#c6ffef"/>
+<path d="M67 71L85 75M75 74L73 88" stroke="#cfb983" stroke-width="4"/>
+</svg>

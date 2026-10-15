@@ -1,0 +1,10 @@
+import {chromium} from '@playwright/test';import assert from 'node:assert/strict';
+const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+const page=await browser.newPage({viewport:{width:320,height:568},hasTouch:true,isMobile:true});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+try{
+ await page.goto('http://localhost:5173/?test=1');await page.waitForFunction(()=>window.__starfall);await page.locator('[data-action="start"]').tap();
+ await page.evaluate(()=>window.__starfall.hurt(12.345));await page.waitForFunction(()=>window.__starfall.snapshot().render.floaterTexts.includes('−12'));assert.ok(Math.abs((await page.evaluate(()=>window.__starfall.snapshot())).hp-87.655)<.001);await page.screenshot({path:'test-results/fix-integer-damage.png'});
+ await page.evaluate(()=>window.__starfall.identity());await page.locator('[data-action="identity:大肥羊"]').tap();const reward=await page.evaluate(()=>window.__starfall.snapshot().eggReward);assert.ok(reward.length>0);assert.equal(await page.locator('#blessing').innerText(),reward);assert.ok(await page.locator('#blessing').isVisible());
+ await page.evaluate(()=>window.__starfall.offer('edge','critical'));await page.locator('[data-action^="upgrade:"]').first().tap();await page.waitForTimeout(4300);assert.ok(await page.locator('#blessing').isVisible());assert.equal(await page.locator('#blessing').innerText(),reward);await page.screenshot({path:'test-results/fix-sheep-blessing.png'});
+ await page.locator('[data-action="pause"]').tap();await page.locator('[data-action="resume"]').tap();assert.ok(await page.locator('#blessing').isVisible());await page.evaluate(()=>window.__starfall.fatal());await page.locator('[data-action="restart"]').tap();assert.ok(await page.locator('#blessing').isHidden());assert.deepEqual(errors,[]);console.log('PASS integer floating damage preserves actual damage; sheep blessing persists after upgrade/pause and resets on restart');
+}finally{await browser.close();}
